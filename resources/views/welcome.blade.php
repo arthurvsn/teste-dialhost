@@ -28,7 +28,7 @@
                 }
             }
             html, body {
-                background-color: #fff;
+                background-color: #D3D3D3;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
@@ -115,6 +115,12 @@
     </nav>
 
     <!-- Page Content -->
+    {{--  {!! Form::open(['url' => 'foo/bar']) !!}
+        
+    {!! Form::input("text", "nome", '', ['class' => 'form-control', 'autofocus']) !!}
+
+    {!! Form::close() !!}  --}}
+
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
@@ -122,7 +128,7 @@
           <p class="lead"></p>
           <ul class="list-unstyled">
           </ul>
-          <form onsubmit="return validaForm(this);" method="">
+          <form onsubmit="return validaForm(this);" method="POST" action="{{ url('usuarios/novo') }}">
             <div class="form-group">
                 <label for="nome">Nome:</label>
                 <input type="text" class="form-control" id="nome" placeholder="Digite seu nome ">
@@ -137,7 +143,7 @@
             </div> -->
             <div class="form-group">
                 <label for="telCelular">Telefone Celular</label>
-                <input type="number" class="form-control" id="telCelular" name="telCelular" placeholder="Digite seu número de telefone">
+                <input type="text" class="form-control" id="telCelular" name="telCelular" placeholder="Digite seu número de telefone" onkeyup="mascara( this, mtel );" maxlength="15">
             </div>
             <div class="form-group">
                 <label for="data-nascimento">Data Nascimento:</label>
@@ -172,10 +178,10 @@
                 <input id="uf-estado" name="uf-estado" type="text" placeholder="UF" class="form-control">
             </div>
             <br />
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="submit" class="btn btn-primary" value="Salvar">
         </form>
         </div>
       </div>
-    </div>    
+    </div>  
     </body>
 </html>
