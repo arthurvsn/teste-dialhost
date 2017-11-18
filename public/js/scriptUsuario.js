@@ -67,7 +67,7 @@ function id(el) {
     return document.getElementById(el);
 }
 window.onload = function () {
-    id('telefone').onkeyup = function () {
+    id('tel_celular').onkeyup = function () {
         mascara(this, mtel);
     }
 }

@@ -29,7 +29,7 @@
                 }
             }
             html, body {
-                background-color: #D3D3D3;
+                background-color: white;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
@@ -140,7 +140,7 @@
             </div>
             <div class="form-group">
                 <label for="email">Endereço de email</label>
-                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite seu email">
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite seu email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
             </div>
             <div class="form-group">
                 <label for="telCelular">Telefone Celular</label>
@@ -160,23 +160,23 @@
             <!-- address-line1 input-->
             <div class="control-group">
                 <label class="control-label" for="endereco">Endereço</label>
-                <input id="endereco" name="endereco" type="text" placeholder="Endereço" class="form-control">
+                <input id="endereco" name="endereco" type="text" placeholder="Endereço" class="form-control" readonly="readonly">
             </div>
             <!-- address-line2 input-->
 
             <div class="control-group">
                 <label class="control-label" for="bairro">Bairro</label>
-                <input id="bairro" name="bairro" type="text" placeholder="Bairro" class="form-control">
+                <input id="bairro" name="bairro" type="text" placeholder="Bairro" class="form-control" readonly="readonly">
             </div>
 
             <div class="control-group">
                 <label class="control-label" for="cidade">Cidade</label>
-                <input id="cidade" name="cidade" type="text" placeholder="Cidade" class="form-control">
+                <input id="cidade" name="cidade" type="text" placeholder="Cidade" class="form-control" readonly="readonly">
             </div>
 
             <div class="control-group">
                 <label class="control-label" for="uf-estado">UF Estado</label>
-                <input id="uf_estado" name="uf_estado" type="text" placeholder="UF" class="form-control">
+                <input id="uf_estado" name="uf_estado" type="text" placeholder="UF" class="form-control" readonly="readonly">
             </div>
             <br />
             <input type="submit" class="btn btn-primary" value="Salvar">
