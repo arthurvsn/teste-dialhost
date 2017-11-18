@@ -9,11 +9,12 @@ class Usuario extends Model
     protected $fillable = [
         'nome',
         'email',
-        'telCelular',
-        'data-nascimento',
+        'tel_celular',
+        'data_nascimento',
         'cep',
         'endereco',
+        'bairro',
         'cidade',
-        'uf-estado'
+        'uf_estado'
     ];
 }

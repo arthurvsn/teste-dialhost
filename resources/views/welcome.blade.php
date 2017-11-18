@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
+        {{--  <meta name"csrf-token" content="{{ csrf_field() }}" />  --}} 
 
         <title>Teste - DialHost</title>
 
@@ -128,26 +129,26 @@
           <p class="lead"></p>
           <ul class="list-unstyled">
           </ul>
+
+          
           <form onsubmit="return validaForm(this);" method="POST" action="{{ url('usuarios/novo') }}">
+            
+            <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
             <div class="form-group">
                 <label for="nome">Nome:</label>
-                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome ">
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome ">
             </div>
             <div class="form-group">
                 <label for="email">Endereço de email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Digite seu email">
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite seu email">
             </div>
-            <!-- <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            </div> -->
             <div class="form-group">
                 <label for="telCelular">Telefone Celular</label>
-                <input type="text" class="form-control" id="telCelular" name="telCelular" placeholder="Digite seu número de telefone" onkeyup="mascara( this, mtel );" maxlength="15">
+                <input type="text" class="form-control" id="tel_celular" name="tel_celular" placeholder="Digite seu número de telefone" onkeyup="mascara( this, mtel );" maxlength="15">
             </div>
             <div class="form-group">
                 <label for="data-nascimento">Data Nascimento:</label>
-                <input type="date" class="form-control" id="data-nascimento" name="data-nascimento" placeholder="Digite seu nome ">
+                <input type="date" class="form-control" id="data_nascimento" name="data_nascimento" placeholder="Digite seu nome ">
             </div>
 
             <div class="control-group">
@@ -175,7 +176,7 @@
 
             <div class="control-group">
                 <label class="control-label" for="uf-estado">UF Estado</label>
-                <input id="uf-estado" name="uf-estado" type="text" placeholder="UF" class="form-control">
+                <input id="uf_estado" name="uf_estado" type="text" placeholder="UF" class="form-control">
             </div>
             <br />
             <input type="submit" class="btn btn-primary" value="Salvar">

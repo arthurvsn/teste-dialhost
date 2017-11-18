@@ -17,7 +17,4 @@ Route::get('/', function () {
 
 Route::get('usuarios', 'UsuariosController@index');
 
-Route::post('usuarios/novo', function(){
-    return view('welcome');
-    //'UsuariosController@salvar'
-});
+Route::post('usuarios/novo', 'UsuariosController@salvar');

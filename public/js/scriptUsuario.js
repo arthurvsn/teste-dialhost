@@ -2,7 +2,7 @@ $(document).ready(function () {
     $("#cep").on('blur', function () {
         jQuery(function ($) {
             correios.init('507Oo1p7bCKj5J3LNAaFlBG2SKl4yqIq', '13JbX5ZVdXedb2K2F4514GySGIxPqvsPmsbmd86eZIfyaff7');
-            $('#cep').correios('#endereco', '#bairro', '#cidade', '#uf-estado');
+            $('#cep').correios('#endereco', '#bairro', '#cidade', '#uf_estado');
         });
     })
 })
@@ -20,13 +20,13 @@ function validaForm(form){
         return false;
     }
 
-    else if ($("#telCelular").val() == "") {
+    else if ($("#tel_celular").val() == "") {
         alert("Preencha com seu númeor de celular");
         $("#telCelular").focus();
         return false;
     }
 
-    else if ($("#data-nascimento").val() == "") {
+    else if ($("#data_nascimento").val() == "") {
         alert("Preencha sua data de nascimento");
         $("#data-nascimento").focus();
         return false;
@@ -38,7 +38,7 @@ function validaForm(form){
         return false;
     }
 
-    else if (($("#endereco").val() == "") || ($("#bairro").val() == "") || ($("#cidade").val() == "") || ($("#uf-estado")).val() == "" ){
+    else if (($("#endereco").val() == "") || ($("#bairro").val() == "") || ($("#cidade").val() == "") || ($("#uf_estado")).val() == "" ){
         alert("Digite seu CEP e espere o complemento das informações do seu endereço!");
         $("#cep").focus();
         return false;

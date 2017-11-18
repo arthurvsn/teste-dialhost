@@ -11,11 +11,19 @@ class UsuariosController extends Controller
         echo "Hello Controller";
     }
     public function salvar(Request $request){
-        var_dump($request);
-        /* $usuario = new Usuario();
+        /* //var_dump($request);
+        if ($_POST){
+            echo "POST";
+            $teste = json_decode($request->getContent(), true);
+            var_dump($request);
+        }
+        else {
+            echo "Error";
+        }die(); */
+        $usuario = new Usuario();
 
-        $usuario = $usuario->create([$request->all()]);
+        $usuario = $usuario->create($request->all());
 
-        return $usuario;            */
+        return $usuario;
     }
 }
